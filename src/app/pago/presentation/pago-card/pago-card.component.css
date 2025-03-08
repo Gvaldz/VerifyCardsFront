@@ -1,0 +1,33 @@
+.card-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #110c0c61;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    background: #3c4b65;
+    color: #fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #040438;
+    border-radius: 5px;
+    background-color: #d0d2e8;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:disabled {
+    background: #122f51;
+  }
+  

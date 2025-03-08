@@ -1,0 +1,24 @@
+<div class="card-container">
+    <form [formGroup]="tarjetaForm" (ngSubmit)="onSubmit()">
+      <h3>Ingrese los datos de su tarjeta para confirmar su compra</h3>
+      <br>
+  
+      <label>Número de Tarjeta</label>
+      <input type="text" formControlName="numeroTarjeta" maxlength="16" placeholder="**** **** **** ****">
+      <div *ngIf="tarjetaForm.get('numeroTarjeta')?.invalid && tarjetaForm.get('numeroTarjeta')?.touched">
+        Número de tarjeta inválido
+      </div>
+  
+      <label>Nombre del Titular</label>
+      <input type="text" formControlName="nombreTitular" placeholder="Nombre como en la tarjeta">
+  
+      <label>Fecha de Expiración</label>
+      <input type="text" formControlName="fechaExpiracion" maxlength="5" placeholder="MM/YY">
+  
+      <label>CVV</label>
+      <input type="text" formControlName="cvv" maxlength="3" placeholder="***">
+  
+      <button type="submit" [disabled]="tarjetaForm.invalid">Enviar</button>
+    </form>
+  </div>
+  
