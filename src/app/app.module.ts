@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { PagoModule } from './pago/pago.module';
 import { HttpClientModule } from '@angular/common/http';
 import { CardRepository } from './pago/domain/repository';
-import { CardRepositoryImpl } from './pago/infrastructure/services';
 
 @NgModule({
   declarations: [
@@ -15,12 +14,11 @@ import { CardRepositoryImpl } from './pago/infrastructure/services';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagoModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    PagoModule
   ],
   providers: [
-    { provide: CardRepository, useClass: CardRepositoryImpl }
   ],
   bootstrap: [AppComponent]
 })
